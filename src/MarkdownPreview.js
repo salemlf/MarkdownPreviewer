@@ -21,6 +21,7 @@ const PreviewContainer = styled.div`
   width: 100%;
   height: 500px;
   background: hsl(230deg, 58%, 82%);
+  border-radius: 15px;
 `;
 
 const Wrapper = styled.div`
