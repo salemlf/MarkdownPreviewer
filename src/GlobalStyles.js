@@ -20,11 +20,18 @@ const GlobalStyles = createGlobalStyle`
     /* lightest blue: hsl(192deg, 100%, 81%)*/
     /* off-white: hsl(192deg, 100%, 96%) */
     font-size: 18px;
+
+    /* CSS variables for colors */
     --bg-color: hsl(191deg, 78%, 16%);
     --main-container-bg: hsl(208deg, 67%, 11%);
     --main-text: hsl(192deg, 100%, 96%);
     --secondary-text: hsl(335deg, 70%, 53%);
+    --highlight-light-blue: hsl(192deg, 100%, 81%);
+    --highlight-med-blue: hsl(191deg, 78%, 16%);
     --highlight-yellow: hsl(55deg, 56%, 55%);
+    --highlight-pink: hsl(335deg, 70%, 53%);
+    --btn-bg: hsl(55deg, 56%, 55%);
+    --btn-text: hsl(191deg, 78%, 16%);
   }
   body {
     background-color: var(--bg-color);

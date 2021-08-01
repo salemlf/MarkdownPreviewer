@@ -2,6 +2,7 @@ import styled from "styled-components/macro";
 import GlobalStyles from "./GlobalStyles";
 import MarkdownInput from "./MarkdownInput";
 import MarkdownPreview from "./MarkdownPreview";
+import Button from "./Button";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <MarkdownInput />
         <MarkdownPreview />
       </InputPreviewContainer>
+      {/* testing button styles, remove later */}
+      <Button>TESTING</Button>
       <GlobalStyles />
     </div>
   );

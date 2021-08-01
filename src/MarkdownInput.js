@@ -1,6 +1,7 @@
+import React from "react";
 import styled from "styled-components/macro";
 
-import React from "react";
+// TODO: add markdown conversion
 
 const MarkdownInput = () => {
   return (
@@ -21,13 +22,25 @@ const TextArea = styled.textarea`
   height: 100%;
   resize: none;
   padding: 10px;
-  border-color: var(--highlight-yellow);
+  border-color: var(--highlight-light-blue);
   background: var(--main-container-bg);
   color: var(--main-text);
   :focus {
-    outline: none !important;
-    border: 2px solid var(--highlight-yellow);
-    box-shadow: 0 0 8px var(--highlight-yellow);
+    outline: none;
+    border: 2px solid var(--highlight-light-blue);
+    box-shadow: 0 0 8px var(--highlight-light-blue);
+  }
+
+  /* firefox */
+  ::-moz-selection {
+    color: var(--highlight-med-blue);
+    background: var(--highlight-yellow);
+  }
+
+  /* other browsers */
+  ::selection {
+    color: var(--highlight-med-blue);
+    background: var(--highlight-yellow);
   }
 `;
 
