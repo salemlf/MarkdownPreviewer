@@ -16,21 +16,30 @@ const MarkdownInput = () => {
 export default MarkdownInput;
 
 const TextArea = styled.textarea`
+  border-radius: 15px;
   width: 100%;
   height: 100%;
   resize: none;
   padding: 10px;
-  outline-color: hsl(230deg, 39%, 12%);
+  border-color: var(--highlight-yellow);
+  background: var(--main-container-bg);
+  color: var(--main-text);
+  :focus {
+    outline: none !important;
+    border: 2px solid var(--highlight-yellow);
+    box-shadow: 0 0 8px var(--highlight-yellow);
+  }
 `;
 
 const Heading = styled.h2`
   font-size: 30px;
+  color: var(--secondary-text);
 `;
 
 const InputContainer = styled.div`
   width: 100%;
   height: 500px;
-  background: hsl(60deg, 100%, 100%);
+  background: var(--main-container-bg);
   border-radius: 15px;
 `;
 

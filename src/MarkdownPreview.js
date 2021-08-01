@@ -15,12 +15,13 @@ export default MarkdownPreview;
 
 const Heading = styled.h2`
   font-size: 30px;
+  color: var(--secondary-text);
 `;
 
 const PreviewContainer = styled.div`
   width: 100%;
   height: 500px;
-  background: hsl(230deg, 58%, 82%);
+  background: var(--main-container-bg);
   border-radius: 15px;
 `;
 

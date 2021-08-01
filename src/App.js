@@ -32,4 +32,5 @@ const InputPreviewContainer = styled.div`
 
 const MarkdownPageHeading = styled.h1`
   text-align: center;
+  color: var(--main-text);
 `;
