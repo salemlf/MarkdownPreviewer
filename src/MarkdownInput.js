@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components/macro";
 
-// TODO: add markdown conversion
-
-const MarkdownInput = () => {
+const MarkdownInput = ({ onChange, markdown }) => {
   return (
     <Wrapper>
       <Heading>Input</Heading>
       <InputContainer>
-        <TextArea></TextArea>
+        <TextArea onChange={(e) => onChange(e.target.value)}>
+          {console.log(markdown)}
+        </TextArea>
       </InputContainer>
     </Wrapper>
   );
@@ -25,6 +25,7 @@ const TextArea = styled.textarea`
   border-color: var(--highlight-light-blue);
   background: var(--main-container-bg);
   color: var(--main-text);
+  border: 2px solid transparent;
   :focus {
     outline: none;
     border: 2px solid var(--highlight-light-blue);
@@ -51,7 +52,7 @@ const Heading = styled.h2`
 
 const InputContainer = styled.div`
   width: 100%;
-  height: 500px;
+  height: 65vh;
   background: var(--main-container-bg);
   border-radius: 15px;
 `;

@@ -1,24 +1,26 @@
+import React, { useState } from "react";
 import styled from "styled-components/macro";
 import GlobalStyles from "./GlobalStyles";
 import MarkdownInput from "./MarkdownInput";
 import MarkdownPreview from "./MarkdownPreview";
 import Button from "./Button";
 
-function App() {
+const App = () => {
+  const [markdown, setMarkdown] = useState("");
   return (
     <div className="App">
       <header className="App-header"></header>
       <MarkdownPageHeading>Markdown Previewer</MarkdownPageHeading>
       <InputPreviewContainer>
-        <MarkdownInput />
-        <MarkdownPreview />
+        <MarkdownInput onChange={setMarkdown} />
+        <MarkdownPreview markdown={markdown} />
       </InputPreviewContainer>
       {/* testing button styles, remove later */}
-      <Button>TESTING</Button>
+      {/* <Button>TESTING</Button> */}
       <GlobalStyles />
     </div>
   );
-}
+};
 
 export default App;
 

@@ -11,6 +11,30 @@ const GlobalStyles = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
   }
+
+  /* Works on Firefox */
+  * {
+    scrollbar-color: hsl(208deg, 67%, 16%) var(--highlight-light-blue);
+  }
+
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--highlight-light-blue);
+    border-radius: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: hsl(208deg, 67%, 16%);
+    border-radius: 20px;
+    border: 3px solid var(--highlight-light-blue);
+  }
+
+
+  /* TODO: add colors to variables */
   html {
     /* dark blue: hsl(208deg, 67%, 11%);*/
     /* light blue: hsl(188deg, 82%, 45%) */
@@ -48,11 +72,8 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
 
     }
-  }
-
-  h1, h2 {
     font-family: 'knileregular';
-    color: hsl(60deg, 100%, 100%);
+    color: var(--main-text);
   }
 `;
 export default GlobalStyles;
