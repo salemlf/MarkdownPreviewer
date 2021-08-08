@@ -9,7 +9,6 @@ const md = require("markdown-it")().use(require("markdown-it-highlightjs"), {
 const MarkdownPreview = ({ markdown }) => {
   return (
     <Wrapper>
-      {/* <Heading>Preview</Heading> */}
       <PreviewContainer>
         <TitleTab>
           <Title>Preview</Title>
@@ -26,28 +25,22 @@ const MarkdownPreview = ({ markdown }) => {
 
 export default MarkdownPreview;
 
-const Heading = styled.h2`
-  font-size: 30px;
-  color: var(--secondary-text);
-`;
-
 const TitleTab = styled.div`
   position: absolute;
   z-index: 1;
-  width: 20%;
-  height: 60px;
+  width: fit-content;
+  height: 10%;
   background: var(--main-container-bg);
-  top: -55px;
+  top: -10%;
   right: 0;
   border-radius: 10px 10px 0 0;
+  padding: 5px 10px;
 `;
 
 const Title = styled.h2`
-  font-size: 28px;
   color: var(--secondary-text);
   text-align: center;
   margin: 0;
-  margin-top: 10px;
 `;
 
 const PreviewContainer = styled.div`

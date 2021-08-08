@@ -10,13 +10,15 @@ const App = () => {
   return (
     <AppContainer>
       <header className="App-header"></header>
-      <MarkdownPageHeading>Markdown Previewer</MarkdownPageHeading>
-      <InputPreviewContainer>
-        <MarkdownInput onChange={setMarkdown} />
-        <MarkdownPreview markdown={markdown} />
-      </InputPreviewContainer>
-      {/* testing button styles, remove later */}
-      {/* <Button>TESTING</Button> */}
+      <PageContent>
+        <MarkdownPageHeading>Markdown Previewer</MarkdownPageHeading>
+        <InputPreviewContainer>
+          <MarkdownInput onChange={setMarkdown} />
+          <MarkdownPreview markdown={markdown} />
+        </InputPreviewContainer>
+        {/* testing button styles, remove later */}
+        {/* <Button>TESTING</Button> */}
+      </PageContent>
       <GlobalStyles />
     </AppContainer>
   );
@@ -28,11 +30,11 @@ const InputPreviewContainer = styled.div`
   display: flex;
   align-items: center;
   width: 95%;
-  /* height: 700px; */
   margin: 0 auto;
   @media only screen and (max-width: 1100px) {
     flex-wrap: wrap;
   }
+  margin-top: 50px;
 `;
 
 const MarkdownPageHeading = styled.h1`
@@ -42,4 +44,9 @@ const MarkdownPageHeading = styled.h1`
 
 const AppContainer = styled.div`
   min-height: 100vh;
+`;
+
+const PageContent = styled.div`
+  width: 100%;
+  margin: 50px auto;
 `;

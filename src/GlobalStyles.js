@@ -33,8 +33,35 @@ const GlobalStyles = createGlobalStyle`
     border: 3px solid var(--highlight-light-blue);
   }
 
+  /* minimal CSS reset */
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    font-size: 100%;
+    /* font: inherit; */
+  }
+
   /* TODO: add colors to variables */
   html {
+    
+    /* @media screen and (min-width: 320px) {
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+
+    @media screen and (min-width: 1000px) {
+      font-size: 22px;
+    } */
+  
     min-height: 100vh;
     /* dark blue: hsl(208deg, 67%, 11%);*/
     /* light blue: hsl(188deg, 82%, 45%) */
@@ -43,7 +70,6 @@ const GlobalStyles = createGlobalStyle`
     /* yellow: hsl(55deg, 56%, 55%) */
     /* lightest blue: hsl(192deg, 100%, 81%)*/
     /* off-white: hsl(192deg, 100%, 96%) */
-    font-size: 18px;
 
     /* CSS variables for colors */
     --bg-color: hsl(191deg, 78%, 16%);
@@ -76,6 +102,38 @@ const GlobalStyles = createGlobalStyle`
     }
     font-family: 'knileregular';
     color: var(--main-text);
+  }
+
+  h1, h2, h3, h4, h4, h6 {
+    font-weight: 800;
+  }
+
+  h1 {
+      font-size: calc(26px + (36 - 26) * ((100vw - 300px) / (1000 - 300)));
+  }
+
+  h2{
+      font-size: calc(24px + (30 - 24) * ((100vw - 300px) / (1000 - 300)));
+  }
+
+  h3{
+      font-size: calc(22px + (28 - 22) * ((100vw - 300px) / (1000 - 300)));
+  }
+
+  h4 {
+      font-size: calc(20px + (26 - 20) *  ((100vw - 300px) / (1000 - 300)));
+  }
+
+  h5 {
+      font-size: calc(18px + (24 - 18) *  ((100vw - 300px) / (1000 - 300)));
+  }
+
+  h6 {
+      font-size: calc(16px + (22 - 16) *  ((100vw - 300px) / (1000 - 300)));
+  }
+
+  p {
+    font-size: calc(16px + (18 - 16) *  ((100vw - 300px) / (1000 - 300)));
   }
 `;
 export default GlobalStyles;

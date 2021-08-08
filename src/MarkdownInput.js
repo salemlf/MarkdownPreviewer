@@ -53,20 +53,20 @@ const TextArea = styled.textarea`
 const TitleTab = styled.div`
   position: absolute;
   z-index: 1;
-  width: 15%;
-  height: 60px;
+  width: fit-content;
+  height: 10%;
   background: var(--main-container-bg);
-  top: -55px;
+  top: -10%;
   right: 0;
   border-radius: 10px 10px 0 0;
+  padding: 5px 10px;
 `;
 
 const Title = styled.h2`
-  font-size: 28px;
+  /* font-size: 28px; */
   color: var(--secondary-text);
   text-align: center;
   margin: 0;
-  margin-top: 10px;
 `;
 
 // TODO: change height
