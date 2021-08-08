@@ -73,6 +73,10 @@ const PreviewMarkup = styled.div`
     border-radius: 10px;
   }
 
+  & pre span {
+    line-height: 2;
+  }
+
   & .hljs {
     font-family: "Nanum Gothic Coding", monospace;
     font-weight: 700;

@@ -4,12 +4,13 @@ import GlobalStyles from "./GlobalStyles";
 import MarkdownInput from "./MarkdownInput";
 import MarkdownPreview from "./MarkdownPreview";
 import Button from "./Button";
+import Header from "./Components/Header";
 
 const App = () => {
   const [markdown, setMarkdown] = useState("");
   return (
     <AppContainer>
-      <header className="App-header"></header>
+      <Header></Header>
       <PageContent>
         <MarkdownPageHeading>Markdown Previewer</MarkdownPageHeading>
         <InputPreviewContainer>
@@ -48,5 +49,5 @@ const AppContainer = styled.div`
 
 const PageContent = styled.div`
   width: 100%;
-  margin: 50px auto;
+  margin: 30px auto;
 `;
