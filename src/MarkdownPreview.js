@@ -9,12 +9,17 @@ const md = require("markdown-it")().use(require("markdown-it-highlightjs"), {
 const MarkdownPreview = ({ markdown }) => {
   return (
     <Wrapper>
-      <Heading>Preview</Heading>
-      <PreviewContainer
-        dangerouslySetInnerHTML={{
-          __html: md.render(markdown),
-        }}
-      ></PreviewContainer>
+      {/* <Heading>Preview</Heading> */}
+      <PreviewContainer>
+        <TitleTab>
+          <Title>Preview</Title>
+        </TitleTab>
+        <PreviewMarkup
+          dangerouslySetInnerHTML={{
+            __html: md.render(markdown),
+          }}
+        ></PreviewMarkup>
+      </PreviewContainer>
     </Wrapper>
   );
 };
@@ -26,11 +31,42 @@ const Heading = styled.h2`
   color: var(--secondary-text);
 `;
 
-const PreviewContainer = styled.div`
-  width: 100%;
-  height: 65vh;
+const TitleTab = styled.div`
+  position: absolute;
+  z-index: 1;
+  width: 20%;
+  height: 60px;
   background: var(--main-container-bg);
+  top: -55px;
+  right: 0;
+  border-radius: 10px 10px 0 0;
+`;
+
+const Title = styled.h2`
+  font-size: 28px;
+  color: var(--secondary-text);
+  text-align: center;
+  margin: 0;
+  margin-top: 10px;
+`;
+
+const PreviewContainer = styled.div`
+  position: relative;
+  z-index: 2;
+  width: 100%;
   border-radius: 15px;
+  /* padding: 10px 15px; */
+`;
+
+const PreviewMarkup = styled.div`
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: 400px;
+  max-height: 600px;
+  /* height: 65vh; */
+  background: var(--main-container-bg);
+  border-radius: 15px 0 15px 15px;
   padding: 10px 15px;
   color: var(--main-text);
   overflow-y: auto;
@@ -116,5 +152,5 @@ const Wrapper = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 10px;
+  margin: 80px 10px;
 `;

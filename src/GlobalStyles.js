@@ -33,9 +33,9 @@ const GlobalStyles = createGlobalStyle`
     border: 3px solid var(--highlight-light-blue);
   }
 
-
   /* TODO: add colors to variables */
   html {
+    min-height: 100vh;
     /* dark blue: hsl(208deg, 67%, 11%);*/
     /* light blue: hsl(188deg, 82%, 45%) */
     /* medium blue: hsl(191deg, 78%, 16%)*/
@@ -58,6 +58,8 @@ const GlobalStyles = createGlobalStyle`
     --btn-text: hsl(191deg, 78%, 16%);
   }
   body {
+    caret-color: var(--highlight-yellow);
+    min-height: 100vh;
     background-color: var(--bg-color);
     @font-face {
     font-family: 'knileregular';

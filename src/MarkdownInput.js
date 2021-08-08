@@ -4,8 +4,10 @@ import styled from "styled-components/macro";
 const MarkdownInput = ({ onChange, markdown }) => {
   return (
     <Wrapper>
-      <Heading>Input</Heading>
       <InputContainer>
+        <TitleTab>
+          <Title>Input</Title>
+        </TitleTab>
         <TextArea onChange={(e) => onChange(e.target.value)}>
           {console.log(markdown)}
         </TextArea>
@@ -17,11 +19,14 @@ const MarkdownInput = ({ onChange, markdown }) => {
 export default MarkdownInput;
 
 const TextArea = styled.textarea`
-  border-radius: 15px;
+  position: relative;
+  z-index: 2;
+  border-radius: 15px 0 15px 15px;
   width: 100%;
-  height: 100%;
+  min-height: 400px;
+  max-height: 600px;
   resize: none;
-  padding: 10px;
+  padding: 15px;
   border-color: var(--highlight-light-blue);
   background: var(--main-container-bg);
   color: var(--main-text);
@@ -45,16 +50,33 @@ const TextArea = styled.textarea`
   }
 `;
 
-const Heading = styled.h2`
-  font-size: 30px;
-  color: var(--secondary-text);
+const TitleTab = styled.div`
+  position: absolute;
+  z-index: 1;
+  width: 15%;
+  height: 60px;
+  background: var(--main-container-bg);
+  top: -55px;
+  right: 0;
+  border-radius: 10px 10px 0 0;
 `;
 
+const Title = styled.h2`
+  font-size: 28px;
+  color: var(--secondary-text);
+  text-align: center;
+  margin: 0;
+  margin-top: 10px;
+`;
+
+// TODO: change height
 const InputContainer = styled.div`
+  position: relative;
   width: 100%;
-  height: 65vh;
+  min-height: 400px;
+  max-height: 600px;
   background: var(--main-container-bg);
-  border-radius: 15px;
+  border-radius: 15px 0 15px 15px;
 `;
 
 const Wrapper = styled.div`

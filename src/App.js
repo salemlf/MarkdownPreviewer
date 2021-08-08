@@ -8,7 +8,7 @@ import Button from "./Button";
 const App = () => {
   const [markdown, setMarkdown] = useState("");
   return (
-    <div className="App">
+    <AppContainer>
       <header className="App-header"></header>
       <MarkdownPageHeading>Markdown Previewer</MarkdownPageHeading>
       <InputPreviewContainer>
@@ -18,7 +18,7 @@ const App = () => {
       {/* testing button styles, remove later */}
       {/* <Button>TESTING</Button> */}
       <GlobalStyles />
-    </div>
+    </AppContainer>
   );
 };
 
@@ -28,7 +28,7 @@ const InputPreviewContainer = styled.div`
   display: flex;
   align-items: center;
   width: 95%;
-  height: 700px;
+  /* height: 700px; */
   margin: 0 auto;
   @media only screen and (max-width: 1100px) {
     flex-wrap: wrap;
@@ -38,4 +38,8 @@ const InputPreviewContainer = styled.div`
 const MarkdownPageHeading = styled.h1`
   text-align: center;
   color: var(--main-text);
+`;
+
+const AppContainer = styled.div`
+  min-height: 100vh;
 `;
