@@ -36,18 +36,6 @@ const TextArea = styled.textarea`
     border: 2px solid var(--highlight-light-blue);
     box-shadow: 0 0 8px var(--highlight-light-blue);
   }
-
-  /* firefox */
-  ::-moz-selection {
-    color: var(--highlight-med-blue);
-    background: var(--highlight-yellow);
-  }
-
-  /* other browsers */
-  ::selection {
-    color: var(--highlight-med-blue);
-    background: var(--highlight-yellow);
-  }
 `;
 
 const TitleTab = styled.div`

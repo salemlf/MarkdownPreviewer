@@ -12,6 +12,18 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+
+  /* text selection colors */
+  *::-moz-selection { /* Code for Firefox */
+     color: var(--highlight-med-blue);
+    background: var(--highlight-yellow);
+  }
+
+  *::selection {
+    color: var(--highlight-med-blue);
+    background: var(--highlight-yellow);
+  }
+
   /* Works on Firefox */
   * {
     scrollbar-color: hsl(208deg, 67%, 16%) var(--highlight-light-blue);
@@ -99,8 +111,8 @@ const GlobalStyles = createGlobalStyle`
          url(${knileRegSvg}) format('svg');
     font-weight: normal;
     font-style: normal;
-
     }
+    
     font-family: 'knileregular';
     color: var(--main-text);
   }
