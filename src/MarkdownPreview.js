@@ -14,6 +14,7 @@ const MarkdownPreview = ({ markdown }) => {
           <Title>Preview</Title>
         </TitleTab>
         <PreviewMarkup
+          id="markup"
           dangerouslySetInnerHTML={{
             __html: md.render(markdown),
           }}
