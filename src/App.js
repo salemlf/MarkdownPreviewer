@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
 import GlobalStyles from "./GlobalStyles";
-import MarkdownInput from "./MarkdownInput";
-import MarkdownPreview from "./MarkdownPreview";
-import Button from "./Button";
+import MarkdownInput from "./Components/MarkdownInput";
+import MarkdownPreview from "./Components/MarkdownPreview";
+import Button from "./Components/Button";
 import Header from "./Components/Header";
 
 // TODO: add other export options
@@ -42,12 +42,12 @@ export default App;
 const InputPreviewContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-around;
   width: 95%;
-  margin: 0 auto;
+  margin: 20px auto;
   @media only screen and (max-width: 1100px) {
     flex-wrap: wrap;
   }
-  margin-top: 50px;
 `;
 
 const MarkdownPageHeading = styled.h1`
@@ -60,6 +60,11 @@ const AppContainer = styled.div`
 `;
 
 const PageContent = styled.div`
-  width: 100%;
-  margin: 30px auto;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  flex: 1 1 0%;
+  max-width: 100vw;
+  overflow: hidden;
 `;

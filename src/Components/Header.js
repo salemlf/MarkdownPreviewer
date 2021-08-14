@@ -29,18 +29,15 @@ const Wrapper = styled.div`
   background-color: var(--main-container-bg);
   position: relative;
   top: 0;
-  padding: 10px;
 `;
 
 const HamburgerMenuBar = styled.div`
   min-width: 15px;
-  width: 15vw;
-  max-width: 75px;
+  width: 11vw;
+  max-width: 68px;
   min-height: 3px;
   height: 1vw;
-  max-height: 10px;
-  /* width: 75px;
-  height: 10px; */
+  max-height: 9px;
   background-color: var(--highlight-yellow);
   margin: 5px 0;
   border-radius: 2px;
@@ -50,6 +47,7 @@ const FlexContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px;
 `;
 
 const HamburgerMenu = styled.div`
@@ -65,23 +63,23 @@ const ToolsContainer = styled.div`
 
 // TODO: create component for responsive icon
 const Settings = styled.div`
-  min-width: 50px;
-  width: 10vw;
-  max-width: 100px;
-  min-height: 50px;
   height: 10vw;
-  max-height: 100px;
+  width: 10vw;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 75px;
+  max-height: 75px;
   background: url(${SettingsIcon});
   background-size: cover;
 `;
 
 const Export = styled.div`
-  min-width: 50px;
-  width: 10vw;
-  max-width: 100px;
-  min-height: 50px;
   height: 10vw;
-  max-height: 100px;
+  width: 10vw;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 75px;
+  max-height: 75px;
   background: url(${ExportIcon});
   background-size: cover;
 `;

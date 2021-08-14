@@ -1,6 +1,7 @@
 import styled from "styled-components/macro";
-
 import React from "react";
+import MarkdownContainer from "./MarkdownContainer";
+import Tab from "./Tab";
 
 const md = require("markdown-it")().use(require("markdown-it-highlightjs"), {
   inline: true,
@@ -8,11 +9,10 @@ const md = require("markdown-it")().use(require("markdown-it-highlightjs"), {
 
 const MarkdownPreview = ({ markdown }) => {
   return (
-    <Wrapper>
+    <MarkdownContainer>
+      {/* <TitleTab>Preview</TitleTab> */}
+      <Tab>Preview</Tab>
       <PreviewContainer>
-        <TitleTab>
-          <Title>Preview</Title>
-        </TitleTab>
         <PreviewMarkup
           id="markup"
           dangerouslySetInnerHTML={{
@@ -20,7 +20,7 @@ const MarkdownPreview = ({ markdown }) => {
           }}
         ></PreviewMarkup>
       </PreviewContainer>
-    </Wrapper>
+    </MarkdownContainer>
   );
 };
 
@@ -28,20 +28,20 @@ export default MarkdownPreview;
 
 const TitleTab = styled.div`
   position: absolute;
-  z-index: 1;
-  width: fit-content;
-  height: 10%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 3px 10px;
+  height: auto;
   background: var(--main-container-bg);
-  top: -10%;
-  right: 0;
+  top: 0px;
+  right: 0px;
   border-radius: 10px 10px 0 0;
-  padding: 5px 10px;
-`;
-
-const Title = styled.h2`
-  color: var(--secondary-text);
+  transform: translateY(-100%);
   text-align: center;
-  margin: 0;
+  color: var(--secondary-text);
+  font-size: var(--secondary-font-size);
+  font-weight: var(--secondary-font-weight);
 `;
 
 const PreviewContainer = styled.div`
@@ -49,16 +49,15 @@ const PreviewContainer = styled.div`
   z-index: 2;
   width: 100%;
   border-radius: 15px;
-  /* padding: 10px 15px; */
 `;
 
+// styles for markup
 const PreviewMarkup = styled.div`
   position: relative;
   z-index: 2;
   width: 100%;
   min-height: 400px;
   max-height: 600px;
-  /* height: 65vh; */
   background: var(--main-container-bg);
   border-radius: 15px 0 15px 15px;
   padding: 10px 15px;
@@ -142,13 +141,4 @@ const PreviewMarkup = styled.div`
   .hljs-symbol {
     color: #49d9fd;
   }
-`;
-
-const Wrapper = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 80px 10px;
 `;

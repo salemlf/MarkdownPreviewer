@@ -1,18 +1,16 @@
 import React from "react";
 import styled from "styled-components/macro";
+import MarkdownContainer from "./MarkdownContainer";
+import Tab from "./Tab";
 
 const MarkdownInput = ({ onChange, markdown }) => {
   return (
-    <Wrapper>
+    <MarkdownContainer>
       <InputContainer>
-        <TitleTab>
-          <Title>Input</Title>
-        </TitleTab>
-        <TextArea onChange={(e) => onChange(e.target.value)}>
-          {console.log(markdown)}
-        </TextArea>
+        <Tab>Input</Tab>
+        <TextArea onChange={(e) => onChange(e.target.value)}></TextArea>
       </InputContainer>
-    </Wrapper>
+    </MarkdownContainer>
   );
 };
 
@@ -38,40 +36,9 @@ const TextArea = styled.textarea`
   }
 `;
 
-const TitleTab = styled.div`
-  position: absolute;
-  z-index: 1;
-  width: fit-content;
-  height: 10%;
-  background: var(--main-container-bg);
-  top: -10%;
-  right: 0;
-  border-radius: 10px 10px 0 0;
-  padding: 5px 10px;
-`;
-
-const Title = styled.h2`
-  /* font-size: 28px; */
-  color: var(--secondary-text);
-  text-align: center;
-  margin: 0;
-`;
-
-// TODO: change height
 const InputContainer = styled.div`
   position: relative;
   width: 100%;
-  min-height: 400px;
-  max-height: 600px;
   background: var(--main-container-bg);
   border-radius: 15px 0 15px 15px;
-`;
-
-const Wrapper = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 10px;
 `;

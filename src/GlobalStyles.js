@@ -94,6 +94,11 @@ const GlobalStyles = createGlobalStyle`
     --highlight-pink: hsl(335deg, 70%, 53%);
     --btn-bg: hsl(55deg, 56%, 55%);
     --btn-text: hsl(191deg, 78%, 16%);
+
+    /* CSS variables for fonts */
+
+    --secondary-font-size: calc(24px + (30 - 24) * ((100vw - 300px) / (1000 - 300)));
+    --secondary-font-weight: 800;
   }
   body {
     caret-color: var(--highlight-yellow);
