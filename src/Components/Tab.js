@@ -15,7 +15,7 @@ const TitleTab = styled.div`
   padding: 3px 10px;
   height: auto;
   background: var(--main-container-bg);
-  top: 0px;
+  top: 1px;
   right: 0px;
   border-radius: 10px 10px 0 0;
   transform: translateY(-100%);

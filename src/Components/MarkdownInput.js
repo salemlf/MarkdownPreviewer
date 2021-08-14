@@ -27,6 +27,7 @@ const TextArea = styled.textarea`
   padding: 15px;
   border-color: var(--highlight-light-blue);
   background: var(--main-container-bg);
+  font-size: var(--text-area-font-size);
   color: var(--main-text);
   border: 2px solid transparent;
   :focus {
