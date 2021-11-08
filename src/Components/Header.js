@@ -3,6 +3,20 @@ import React from "react";
 
 import SettingsIcon from "../Icons/settings-icon.svg";
 import ExportIcon from "../Icons/export-icon.svg";
+import SettingsIconHover from "../Icons/settings-icon-hover.svg";
+import ExportIconHover from "../Icons/export-icon-hover.svg";
+
+// !added
+//exports HTML with temporary ugly button
+function handleClick(e) {
+  e.preventDefault();
+  console.log("CLICKED");
+  let a = document.body.appendChild(document.createElement("a"));
+  a.download = "myMarkdown.html";
+  a.href = "data:text/html," + document.getElementById("markup").innerHTML;
+  a.click();
+}
+// !added
 
 const Header = () => {
   return (
@@ -10,19 +24,45 @@ const Header = () => {
       <FlexContainer>
         <ToolsContainer>
           <Settings />
-          <Export />
+          {/* <Export /> */}
+          <TestButton onClick={handleClick} />
         </ToolsContainer>
-        <HamburgerMenu>
+        {/* <HamburgerMenu>
           <HamburgerMenuBar />
           <HamburgerMenuBar />
           <HamburgerMenuBar />
-        </HamburgerMenu>
+        </HamburgerMenu> */}
       </FlexContainer>
     </Wrapper>
   );
 };
 
 export default Header;
+
+const TestButton = styled.button`
+  height: 10vw;
+  width: 10vw;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 75px;
+  max-height: 75px;
+  background: url(${ExportIcon});
+  background-size: cover;
+  border: 0px;
+  cursor: pointer;
+  &:hover {
+    height: 10vw;
+    width: 10vw;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 75px;
+    max-height: 75px;
+    background: url(${ExportIconHover});
+    background-size: cover;
+    border: 0px;
+    cursor: pointer;
+  }
+`;
 
 const Wrapper = styled.div`
   width: 100%;
@@ -69,8 +109,11 @@ const Settings = styled.div`
   min-height: 50px;
   max-width: 75px;
   max-height: 75px;
-  background: url(${SettingsIcon});
+  background-image: url(${SettingsIcon});
   background-size: cover;
+  &:hover {
+    background-image: url(${SettingsIconHover});
+  }
 `;
 
 const Export = styled.div`
