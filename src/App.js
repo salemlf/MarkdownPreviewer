@@ -3,7 +3,6 @@ import styled from "styled-components/macro";
 import GlobalStyles from "./GlobalStyles";
 import MarkdownInput from "./Components/MarkdownInput";
 import MarkdownPreview from "./Components/MarkdownPreview";
-import Button from "./Components/Button";
 import Header from "./Components/Header";
 
 const App = () => {
