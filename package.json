@@ -2,7 +2,7 @@
   "name": "markdown-previewer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://salemlf.github.io/markdownPreviewer",
+  "homepage": "https://salemlf.github.io/MarkdownPreviewer",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
