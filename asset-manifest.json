@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.js": "/markdown-previewer/static/js/main.1d21456d.chunk.js",
+    "main.js.map": "/markdown-previewer/static/js/main.1d21456d.chunk.js.map",
+    "runtime-main.js": "/markdown-previewer/static/js/runtime-main.8e036d9f.js",
+    "runtime-main.js.map": "/markdown-previewer/static/js/runtime-main.8e036d9f.js.map",
+    "static/js/2.f13e7d35.chunk.js": "/markdown-previewer/static/js/2.f13e7d35.chunk.js",
+    "static/js/2.f13e7d35.chunk.js.map": "/markdown-previewer/static/js/2.f13e7d35.chunk.js.map",
+    "static/js/3.da7cb735.chunk.js": "/markdown-previewer/static/js/3.da7cb735.chunk.js",
+    "static/js/3.da7cb735.chunk.js.map": "/markdown-previewer/static/js/3.da7cb735.chunk.js.map",
+    "index.html": "/markdown-previewer/index.html",
+    "static/js/2.f13e7d35.chunk.js.LICENSE.txt": "/markdown-previewer/static/js/2.f13e7d35.chunk.js.LICENSE.txt",
+    "static/media/export-icon-hover.5c1432ca.svg": "/markdown-previewer/static/media/export-icon-hover.5c1432ca.svg",
+    "static/media/export-icon.25a44ca5.svg": "/markdown-previewer/static/media/export-icon.25a44ca5.svg",
+    "static/media/knile-regular-webfont.1f29e93f.svg": "/markdown-previewer/static/media/knile-regular-webfont.1f29e93f.svg",
+    "static/media/knile-regular-webfont.3841170f.woff": "/markdown-previewer/static/media/knile-regular-webfont.3841170f.woff",
+    "static/media/knile-regular-webfont.73c41058.eot": "/markdown-previewer/static/media/knile-regular-webfont.73c41058.eot",
+    "static/media/knile-regular-webfont.c45ee9ed.ttf": "/markdown-previewer/static/media/knile-regular-webfont.c45ee9ed.ttf",
+    "static/media/knile-regular-webfont.f2208a43.woff2": "/markdown-previewer/static/media/knile-regular-webfont.f2208a43.woff2",
+    "static/media/settings-icon-hover.4fb477a1.svg": "/markdown-previewer/static/media/settings-icon-hover.4fb477a1.svg",
+    "static/media/settings-icon.9c1b179e.svg": "/markdown-previewer/static/media/settings-icon.9c1b179e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8e036d9f.js",
+    "static/js/2.f13e7d35.chunk.js",
+    "static/js/main.1d21456d.chunk.js"
+  ]
+}
