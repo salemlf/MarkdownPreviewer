@@ -6,17 +6,6 @@ import MarkdownPreview from "./Components/MarkdownPreview";
 import Button from "./Components/Button";
 import Header from "./Components/Header";
 
-// TODO: add other export options
-//exports HTML with temporary ugly button
-function handleClick(e) {
-  e.preventDefault();
-  console.log("CLICKED");
-  let a = document.body.appendChild(document.createElement("a"));
-  a.download = "myMarkdown.html";
-  a.href = "data:text/html," + document.getElementById("markup").innerHTML;
-  a.click();
-}
-
 const App = () => {
   const [markdown, setMarkdown] = useState("");
 
@@ -29,8 +18,6 @@ const App = () => {
           <MarkdownInput onChange={setMarkdown} />
           <MarkdownPreview markdown={markdown} />
         </InputPreviewContainer>
-        {/* testing button styles, remove later */}
-        <button onClick={handleClick}>TESTING</button>
       </PageContent>
       <GlobalStyles />
     </AppContainer>
