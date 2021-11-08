@@ -100,7 +100,7 @@ const GlobalStyles = createGlobalStyle`
     --secondary-font-size: calc(24px + (30 - 24) * ((100vw - 300px) / (1000 - 300)));
     --secondary-font-weight: 800;
     
-    --text-area-font-size: font-size: calc(16px + (18 - 16) *  ((100vw - 300px) / (1000 - 300)));
+    --text-area-font-size: calc(16px + (26 - 16) *  ((100vw - 300px) / (1600 - 300)));
   }
   body {
     caret-color: var(--highlight-yellow);

@@ -21,8 +21,7 @@ const TextArea = styled.textarea`
   z-index: 2;
   border-radius: 15px 0 15px 15px;
   width: 100%;
-  min-height: 400px;
-  max-height: 600px;
+  height: 500px;
   resize: none;
   padding: 15px;
   border-color: var(--highlight-light-blue);
@@ -40,6 +39,7 @@ const TextArea = styled.textarea`
 const InputContainer = styled.div`
   position: relative;
   width: 100%;
+  height: 500px;
   background: var(--main-container-bg);
   border-radius: 15px 0 15px 15px;
 `;

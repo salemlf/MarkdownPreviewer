@@ -10,7 +10,6 @@ const md = require("markdown-it")().use(require("markdown-it-highlightjs"), {
 const MarkdownPreview = ({ markdown }) => {
   return (
     <MarkdownContainer>
-      {/* <TitleTab>Preview</TitleTab> */}
       <Tab>Preview</Tab>
       <PreviewContainer>
         <PreviewMarkup
@@ -26,24 +25,6 @@ const MarkdownPreview = ({ markdown }) => {
 
 export default MarkdownPreview;
 
-const TitleTab = styled.div`
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  padding: 3px 10px;
-  height: auto;
-  background: var(--main-container-bg);
-  top: 0px;
-  right: 0px;
-  border-radius: 10px 10px 0 0;
-  transform: translateY(-100%);
-  text-align: center;
-  color: var(--secondary-text);
-  font-size: var(--secondary-font-size);
-  font-weight: var(--secondary-font-weight);
-`;
-
 const PreviewContainer = styled.div`
   position: relative;
   z-index: 2;
@@ -56,8 +37,7 @@ const PreviewMarkup = styled.div`
   position: relative;
   z-index: 2;
   width: 100%;
-  min-height: 400px;
-  max-height: 600px;
+  height: 500px;
   background: var(--main-container-bg);
   border-radius: 15px 0 15px 15px;
   padding: 10px 15px;
